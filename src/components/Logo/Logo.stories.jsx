@@ -10,5 +10,5 @@ export default {
 
 const Template = (args) => <Logo {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {};
+export const Main = Template.bind({});
+Main.args = {};
