@@ -1,0 +1,6 @@
+@use "./mixins/visually-hidden.scss";
+@forward "./mixins/visually-hidden.scss";
+
+.visually-hidden{
+  @include visually-hidden.visually-hidden;
+}
