@@ -1,0 +1,28 @@
+.main-header {
+  &__layer1 {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 4px;
+  }
+
+  &__layer2 {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 26px;
+  }
+
+  &__layer3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__logo {
+    margin-right: 58px;
+  }
+
+  &__search {
+    margin-right: auto;
+    width: 479px;
+  }
+}
