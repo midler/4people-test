@@ -1,0 +1,23 @@
+@use "../../styles/bootstrap/bootstrap.scss";
+
+.list {
+  @include bootstrap.list-reset;
+  display: flex;
+  flex-direction: column;
+
+  &--horizontal {
+    flex-direction: row;
+  }
+
+  &--align-top {
+    align-items: flex-start;
+  }
+
+  &--align-bottom {
+    align-items: flex-end;
+  }
+
+  &--align-center {
+    align-items: center;
+  }
+}
