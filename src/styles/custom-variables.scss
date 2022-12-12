@@ -1,4 +1,6 @@
+@use "./bootstrap/variables.scss";
+
 :root {
-  --main-color: #4859F0;
-  --main-text-color: #212121;
+  --main-color: #{variables.$main-color};
+  --main-text: #{variables.$text-color};
 }
