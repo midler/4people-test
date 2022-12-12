@@ -1,0 +1,35 @@
+@use "../../styles/bootstrap/bootstrap.scss";
+@use "sass:color";
+
+.user-menu-link {
+
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 1.2;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0;
+  background-color: transparent;
+  padding-left: 39px;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #0079c1;
+    outline-offset: 2px;
+  }
+
+  &:focus {
+    @supports not selector(:focus-visible) {
+      outline: 2px solid #0079c1;
+      outline-offset: 2px;
+    }
+  }
+}
