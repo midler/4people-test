@@ -1,7 +1,10 @@
 @forward "./variables.scss";
+@forward "./fonts.scss";
+
 @use "./mixins/visually-hidden.scss";
 @forward "./mixins/visually-hidden.scss";
-@forward "./fonts.scss";
+
+@forward "./mixins/list-reset.scss";
 
 .visually-hidden{
   @include visually-hidden.visually-hidden;
