@@ -1,15 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
+import clsx from "clsx";
 
 import "./SearchInput.scss";
 
 export const SearchInput = ({ ...props }) => {
   return (
-    <div className="search-form">
-      <label htmlFor="search-input" className="visually-hidden">Введите фразу или слово для поиска</label>
+    <form className={clsx("search-form", props.className)}>
+      <label htmlFor="search-input" className="visually-hidden">Search</label>
       <input type="text" id="search-input" className="search-form__input" placeholder="Product SKU, Name…"/>
-      <button type="button" className="search-form__button" aria-label="Искать" onClick={props.submit}></button>
-    </div>
+      <button type="button" className="search-form__button" aria-label="Search" onClick={props.submit}></button>
+    </form>
   );
 };
 

@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
+import clsx from "clsx";
 
 import "./Link.scss";
 
 export const Link = ({ ...props }) => {
   return (
-    <a className={`link ${props.className}`} href={props.href}>
+    <a className={clsx("link", props.className)} href={props.href}>
       {props.children}
     </a>
   );
@@ -18,5 +19,5 @@ Link.propTypes = {
 
 Link.defaultProps = {
   href: "#",
-  className: ""
+  className: "",
 };

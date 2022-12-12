@@ -1,18 +1,31 @@
 import React from "react";
 import PropTypes from "prop-types";
+import clsx from "clsx";
 
 import "./List.scss";
 
 const List = ({ ...props }) => {
-  const alignClass = `list--align-${props.align}`;
   return (
     <ul
-      className={`list ${props.horizontal ? "list--horizontal" : ""} ${
-        props.align ? alignClass : ""
-      }`}
+      className={clsx(
+        "list",
+        props.horizontal ? "list--horizontal" : "",
+        props.align ? `list--align-${props.align}` : "",
+        props.className ? props.className : ""
+      )}
     >
       {props.children?.map((item, key) => {
-        return <li key={key}>{item}</li>;
+        return (
+          <li
+            key={key}
+            className={clsx(
+              'list__item',
+               props.className ? `${props.className}__item` : ""
+            )}
+          >
+            {item}
+          </li>
+        );
       })}
     </ul>
   );
@@ -21,10 +34,11 @@ const List = ({ ...props }) => {
 List.propTypes = {
   horizontal: PropTypes.bool,
   children: PropTypes.arrayOf(PropTypes.element),
+  align: PropTypes.string,
 };
 
 List.defaultProps = {
   horizontal: false,
-  align: ["top", "bottom", "center"],
+  align: "top",
 };
 export default List;
