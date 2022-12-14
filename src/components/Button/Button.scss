@@ -1,0 +1,42 @@
+.button {
+  display: inline-block;
+  padding: 19px 105px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.2;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: none;
+  border-radius: 16px;
+  background-color: var(--main-color);
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  appearance: button;
+  text-transform: none;
+
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #0079c1;
+    outline-offset: 2px;
+  }
+
+  &:focus {
+    @supports not selector(:focus-visible) {
+      outline: 2px solid #0079c1;
+      outline-offset: 2px;
+    }
+  }
+}
