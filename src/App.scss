@@ -1,7 +1,18 @@
 @use "./styles/index.scss";
-@use './styles/components/main-page.scss';
+@use "./styles/components/main-page.scss";
 @use "./styles/components/main-header.scss";
 @use "./styles/components/header-links.scss";
 @use "./styles/components/main-nav.scss";
 @use "./styles/components/main-nav-list.scss";
 @use "./styles/components/main-nav-link.scss";
+@use "./styles/components/cart-button.scss";
+@use "./styles/components/main-phone.scss";
+@use "./styles/components/main-section.scss";
+@use "./styles/components/slider-pagination.scss";
+@use "./styles/components/categories.scss";
+@use "./styles/components/promo.scss";
+@use "./styles/components/advantages.scss";
+@use "./styles/components/main-footer.scss";
+
+
+@use "./styles/components/modal.scss";
