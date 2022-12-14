@@ -1,0 +1,36 @@
+.advantages {
+  padding-top: 107px;
+  padding-bottom: 112px;
+}
+
+.advantages-list {
+  justify-content: space-around;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  color: var(--text-color);
+
+  &__item {
+    padding-top: 28px + 73px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: auto 76px;
+
+    &:nth-child(1) {
+      background-image: url("../../assets/svg/advantages-1.svg");
+    }
+
+    &:nth-child(2) {
+      background-image: url("../../assets/svg/advantages-2.svg");
+    }
+
+    &:nth-child(3) {
+      background-image: url("../../assets/svg/advantages-3.svg");
+    }
+  }
+
+  &__item > p {
+    margin: 0;
+  }
+}
