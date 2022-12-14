@@ -10,7 +10,8 @@ import { UserMenuLink } from "./components/UserMenuLink/UserMenuLink.jsx";
 import List from "./components/List/List.jsx";
 import Slide from "./components/Slide/Slide.jsx";
 import { Button } from "./components/Button/Button.jsx";
-
+import { SubscriptionForm } from "./components/SubscriptionForm/SubscriptionForm.jsx";
+import { LiveChatButton } from "./components/LiveChatButton/LiveChatButton.jsx";
 import "./App.scss";
 
 import "swiper/css";
@@ -81,7 +82,7 @@ function App() {
           <nav className="main-nav">
             <List className="main-nav-list" horizontal>
               <Link href="/" className="main-nav-link">
-                Product
+                Products
               </Link>
               <Link href="/" className="main-nav-link">
                 Resources
@@ -311,9 +312,7 @@ function App() {
           <h2 className="visually-hidden">Advantages</h2>
           <List horizontal className="advantages-list">
             <p>Products Catalog</p>
-
             <p>24/7 Customer Support</p>
-
             <p>Product Ideas</p>
           </List>
         </section>
@@ -352,25 +351,21 @@ function App() {
               <a href="/">Feedback</a>
               <a href="/">Live Chat</a>
               <a href="/">My Account</a>
-              <a href="tel:+844434672" class="main-phone main-phone--footer">+(844) 434-672</a>
+              <a href="tel:+844434672" class="main-phone main-phone--footer">
+                +(844) 434-672
+              </a>
             </List>
           </section>
         </div>
         <div>
-          <section className="suscription">
+          <section className="subscription">
             <h2 className="visually-hidden">Subscription</h2>
             <p>
               Subscribe to our mailing list to receive exclusive offers and the
               latest product updates
             </p>
 
-            <form>
-              <label htmlFor="subscription" className="visually-hidden">
-                Subscription form
-              </label>
-              <input type="text" id="subscription" placeholder="Your E-mail" />
-              <button type="submit">Subscribe</button>
-            </form>
+            <SubscriptionForm />
           </section>
 
           <section className="payments-method">
@@ -382,13 +377,15 @@ function App() {
           </section>
         </div>
         <div>
-          <p className="all-right-reserved">© «Brand» 2022, All Rights Reserved</p>
+          <p className="all-right-reserved">
+            © «Brand» 2022, All Rights Reserved
+          </p>
         </div>
       </footer>
 
       <div className="modal-container">
         <div className="modal-container__layer1">
-          <button className="livechat">Лайвчат</button>
+            <LiveChatButton className="main-page__livechat"></LiveChatButton>
         </div>
       </div>
     </div>
