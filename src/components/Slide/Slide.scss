@@ -1,0 +1,53 @@
+@use "../../styles/bootstrap/bootstrap.scss";
+
+.slide {
+  min-height: 675px;
+  padding: 244px 96px 141px;
+
+  border-radius: 16px;
+  background: linear-gradient(
+    90.36deg,
+    #1f2670 29.82%,
+    rgba(39, 48, 139, 0) 99.68%
+  );
+  color: white;
+  position: relative;
+  overflow: hidden;
+
+  &__content {
+    width: 582px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 1.21;
+    margin-bottom: 114px  ;
+  }
+
+  &__image-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background-image: linear-gradient(
+        110.67deg,
+        rgba(54, 68, 196, 0.74) 12.49%,
+        rgba(49, 59, 152, 0.51) 84.84%
+      );
+    }
+  }
+  &__image {
+    height: 100%;
+  }
+}
