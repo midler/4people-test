@@ -1,0 +1,52 @@
+.livechat {
+  display: inline-flex;
+  align-items: center;
+  gap: 33px;
+  padding: 12px 22px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: none;
+  box-shadow: 0 4px 11px rgb(33 33 33 / 35%);
+  border-radius: 100px;
+  background-color: var(--main-color);
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  appearance: button;
+  text-transform: none;
+  pointer-events: all;
+
+  &::after {
+    content: "";
+    width: 28px;
+    height: 26px;
+    background-image: url("./arrow.svg");
+  }
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #0079c1;
+    outline-offset: 2px;
+  }
+
+  &:focus {
+    @supports not selector(:focus-visible) {
+      outline: 2px solid #0079c1;
+      outline-offset: 2px;
+    }
+  }
+}
