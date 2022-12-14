@@ -1,5 +1,11 @@
 .main-page {
   padding: 0 24px;
-  width: 1392px;
+  width: 1440px;
   margin: 0 auto;
+
+  &__livechat {
+    position: absolute;
+    bottom: 10px;
+    right: 5px;
+  }
 }

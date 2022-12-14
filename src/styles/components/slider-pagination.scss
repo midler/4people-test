@@ -10,8 +10,9 @@
     left: auto;
   }
 
+  /* stylelint-disable-next-line selector-class-pattern */
   .slider-pagination__item {
-    background: rgba(255, 255, 255, 0.6);
+    background: rgb(255 255 255 / 60%);
     backdrop-filter: blur(5px);
     opacity: 1;
     border-radius: 4px;
@@ -19,7 +20,7 @@
     will-change: width;
 
     &.swiper-pagination-bullet-active {
-      background: #ffffff;
+      background: #fff;
       width: 26px;
     }
   }

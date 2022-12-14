@@ -1,4 +1,6 @@
 .header-links {
+  gap: 3px;
+
   &__item:not(:last-child) {
       margin-right: 12px;
     }

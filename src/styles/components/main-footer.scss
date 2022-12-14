@@ -3,15 +3,14 @@
   color: white;
   padding: 37px 23px 13px;
   border-radius: 16px 16px 0 0;
-
   display: grid;
   gap: 28px 58px;
-  grid-template-columns: (880px-58px) 1fr;
+  grid-template-columns: 822px 1fr;
 
   &__row {
     display: flex;
     justify-content: space-between;
-    padding-right: 171px - 59px;
+    padding-right: 100px;
   }
 }
 
@@ -24,7 +23,7 @@
 .footer-links {
   &__title {
     margin: 0;
-    margin-bottom: 23px;
+    margin-bottom: 20px;
     font-weight: 700;
     font-size: 20px;
     line-height: 1.2;
@@ -39,9 +38,6 @@
       text-decoration: none;
       font-size: 16px;
       line-height: 1.2;
-    }
-    & + & {
-      margin-top: 5px;
     }
   }
 }
