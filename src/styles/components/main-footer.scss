@@ -1,16 +1,28 @@
+@use "../bootstrap/bootstrap.scss";
+
 .main-footer {
   background-color: var(--main-text);
   color: white;
   padding: 37px 23px 13px;
   border-radius: 16px 16px 0 0;
-  display: grid;
-  gap: 28px 58px;
-  grid-template-columns: 822px 1fr;
+
+  @media (min-width: bootstrap.$desktop) {
+    display: grid;
+    gap: 28px 58px;
+    grid-template-columns: 822px 1fr;
+  }
 
   &__row {
-    display: flex;
-    justify-content: space-between;
-    padding-right: 100px;
+    margin-bottom: 32px;
+    @media (min-width: bootstrap.$tablet) {
+      display: flex;
+      justify-content: space-between;
+      padding-right: 100px;
+      margin-bottom: 32px;
+    }
+    @media (min-width: bootstrap.$desktop) {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -21,6 +33,13 @@
 }
 
 .footer-links {
+  & + & {
+    margin-top: 64px;
+    @media (min-width: bootstrap.$tablet) {
+      margin-top: 0;
+    }
+  }
+
   &__title {
     margin: 0;
     margin-bottom: 20px;

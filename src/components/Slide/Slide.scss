@@ -1,8 +1,7 @@
 @use "../../styles/bootstrap/bootstrap.scss";
 
 .slide {
-  min-height: 675px;
-  padding: 200px 96px 83px;
+  padding: 20px;
   border-radius: 16px;
   background: linear-gradient(
     90.36deg,
@@ -13,16 +12,26 @@
   position: relative;
   overflow: hidden;
 
+  @media (min-width: bootstrap.$desktop) {
+    padding: 200px 96px 83px;
+  }
+
   &__content {
-    width: 582px;
+    @media (min-width: bootstrap.$desktop) {
+      width: 582px;
+    }
   }
 
   &__title {
     font-weight: 700;
-    font-size: 46px;
+    font-size: 36px;
     line-height: 1.21;
-    margin-bottom: 114px  ;
     letter-spacing: -0.3px;
+
+    @media (min-width: bootstrap.$desktop) {
+      font-size: 46px;
+      margin-bottom: 114px;
+    }
   }
 
   &__image-wrapper {
@@ -50,5 +59,6 @@
 
   &__image {
     height: 100%;
+    object-fit: cover;
   }
 }

@@ -1,0 +1,19 @@
+@use "../bootstrap/bootstrap.scss";
+
+.user-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  @media (min-width: bootstrap.$tablet) {
+    justify-content: center;
+    display: flex;
+  }
+
+  @media (min-width: bootstrap.$desktop) {
+    justify-content: flex-start;
+  }
+
+
+
+}

@@ -1,8 +1,13 @@
+@use "../bootstrap/bootstrap.scss";
+
 .main-phone {
   font-size: 22px;
   line-height: 1.2;
-  margin-left: -24px;
   position: relative;
+
+  @media (min-width: bootstrap.$desktop) {
+    margin-left: -24px;
+  }
 
   &::before {
     content: "";
@@ -21,10 +26,15 @@
     margin-left: 0;
     margin-top: 13px;
     display: inline-block;
-    border-bottom: 1px solid rgb(255 255 255 / 40%);
+
+    @media (min-width: bootstrap.$desktop) {
+      border-bottom: 1px solid rgb(255 255 255 / 40%);
+    }
 
     &::before {
       bottom: 0;
+      position: static;
+      display: inline-block;
     }
   }
 }

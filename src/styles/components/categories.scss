@@ -1,5 +1,10 @@
+@use "../bootstrap/bootstrap.scss";
+
 .categories {
-  margin-bottom: 101px;
+  margin-bottom: 64px;
+  @media (min-width: bootstrap.$desktop) {
+    margin-bottom: 101px;
+  }
 
   &__title-block {
     display: flex;
@@ -70,5 +75,6 @@
 
   &__image {
     margin-bottom: 14px;
+    object-fit: contain;
   }
 }

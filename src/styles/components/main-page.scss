@@ -1,7 +1,13 @@
+@use "../bootstrap/bootstrap.scss";
+
 .main-page {
   padding: 0 24px;
-  width: 1440px;
-  margin: 0 auto;
+  width: 100%;
+
+  @media (min-width: bootstrap.$desktop) {
+    width: 1440px;
+    margin: 0 auto;
+  }
 
   &__livechat {
     position: absolute;

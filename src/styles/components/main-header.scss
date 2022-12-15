@@ -1,3 +1,5 @@
+@use "../bootstrap/bootstrap.scss";
+
 .main-header {
   margin-bottom: 23px;
 
@@ -11,20 +13,47 @@
     display: flex;
     align-items: flex-start;
     margin-bottom: 20px;
+    flex-wrap: wrap;
   }
 
   &__layer3 {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @media (min-width: bootstrap.$desktop) {
+      align-items: flex-start;
     justify-content: space-between;
-    align-items: flex-start;
+
+
+    }
   }
 
   &__logo {
     margin-right: 58px;
+    margin-bottom: 16px;
+    @media (min-width: bootstrap.$desktop) {
+      margin-bottom: 0;
+    }
   }
 
   &__search {
     margin-right: auto;
     width: 479px;
+    margin-bottom: 16px;
+    width: 100%;
+
+    @media (min-width: bootstrap.$desktop) {
+      margin-bottom: 0;
+      width: auto;
+    }
+  }
+
+  &__user-menu {
+    width: 100%;
+
+    @media (min-width: bootstrap.$desktop) {
+      width: auto;
+    }
   }
 }

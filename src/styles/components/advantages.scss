@@ -1,5 +1,10 @@
+@use "../bootstrap/bootstrap.scss";
+
 .advantages {
-  padding: 107px 90px 112px;
+  padding: 45px;
+  @media (min-width: bootstrap.$desktop) {
+    padding: 107px 90px 112px;
+  }
 }
 
 .advantages-list {
@@ -9,12 +14,28 @@
   line-height: 30px;
   text-align: center;
   color: var(--text-color);
+  display: block;
+
+  @media (min-width: bootstrap.$tablet) {
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+  }
 
   &__item {
     padding-top: 28px + 73px;
     background-position: top center;
     background-repeat: no-repeat;
     background-size: auto 76px;
+
+
+    & + & {
+      margin-top: 64px;
+      @media (min-width: bootstrap.$tablet) {
+        margin-top: 0;
+      }
+
+    }
 
     &:nth-child(1) {
       background-image: url("../../assets/svg/advantages-1.svg");
@@ -27,6 +48,7 @@
     &:nth-child(3) {
       background-image: url("../../assets/svg/advantages-3.svg");
     }
+
   }
 
   &__item > p {

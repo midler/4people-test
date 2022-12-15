@@ -2,6 +2,7 @@
 @use "./styles/components/main-page.scss";
 @use "./styles/components/main-header.scss";
 @use "./styles/components/header-links.scss";
+@use "./styles/components/user-menu.scss";
 @use "./styles/components/main-nav.scss";
 @use "./styles/components/main-nav-list.scss";
 @use "./styles/components/main-nav-link.scss";
@@ -14,5 +15,6 @@
 @use "./styles/components/advantages.scss";
 @use "./styles/components/main-footer.scss";
 @use  "./styles/components/subscription.scss";
+@use  "./styles/components/payments-method.scss";
 
 @use "./styles/components/modal.scss";

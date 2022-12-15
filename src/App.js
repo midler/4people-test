@@ -62,21 +62,23 @@ function App() {
         <div className="main-header__layer2">
           <Logo className="main-header__logo" />
           <SearchInput className="main-header__search" />
-          <List className="user-menu" horizontal>
-            <UserMenuLink icon={<UserNavIcon1 />}>Lists</UserMenuLink>
-            <UserMenuLink icon={<UserNavIcon2 />}>Account</UserMenuLink>
-            <UserMenuLink icon={<UserNavIcon3 />}>Quick Order</UserMenuLink>
-            <UserMenuLink
-              icon={
-                <span className="cart-button">
-                  <span className="cart-button__count">32</span>
-                  <UserNavIcon4 />
-                </span>
-              }
-            >
-              Cart
-            </UserMenuLink>
-          </List>
+          <div className=" main-header__user-menu ">
+            <List className="user-menu" horizontal>
+              <UserMenuLink icon={<UserNavIcon1 />}>Lists</UserMenuLink>
+              <UserMenuLink icon={<UserNavIcon2 />}>Account</UserMenuLink>
+              <UserMenuLink icon={<UserNavIcon3 />}>Quick Order</UserMenuLink>
+              <UserMenuLink
+                icon={
+                  <span className="cart-button">
+                    <span className="cart-button__count">32</span>
+                    <UserNavIcon4 />
+                  </span>
+                }
+              >
+                Cart
+              </UserMenuLink>
+            </List>
+          </div>
         </div>
         <div className="main-header__layer3">
           <nav className="main-nav">
@@ -151,8 +153,20 @@ function App() {
           <Swiper
             modules={[Pagination, Navigation]}
             className="categories-list"
-            slidesPerView={6}
-            spaceBetween={42}
+            breakpoints={{
+              320: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              768: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+              },
+              1024: {
+                slidesPerView: 6,
+                spaceBetween: 42,
+              },
+            }}
             navigation={{
               prevEl: navigationPrevRef.current,
               nextEl: navigationNextRef.current,
@@ -351,7 +365,10 @@ function App() {
               <a href="/">Feedback</a>
               <a href="/">Live Chat</a>
               <a href="/">My Account</a>
-              <a href="tel:+844434672" class="main-phone main-phone--footer">
+              <a
+                href="tel:+844434672"
+                className="main-phone main-phone--footer"
+              >
                 +(844) 434-672
               </a>
             </List>
@@ -373,6 +390,7 @@ function App() {
             <img
               src={paymentMethodImage}
               alt="You can pay with: MasterCard, Visa, Discover, AmericanExpress."
+              className="payments-method__image"
             />
           </section>
         </div>
@@ -385,7 +403,7 @@ function App() {
 
       <div className="modal-container">
         <div className="modal-container__layer1">
-            <LiveChatButton className="main-page__livechat"></LiveChatButton>
+          <LiveChatButton className="main-page__livechat"></LiveChatButton>
         </div>
       </div>
     </div>

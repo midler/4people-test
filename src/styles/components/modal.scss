@@ -1,3 +1,5 @@
+@use "../bootstrap/bootstrap.scss";
+
 .modal-container {
   position: fixed;
   top: 0;
@@ -7,12 +9,13 @@
   pointer-events: none;
   z-index: 10;
 
-
   &__layer1 {
     padding: 0 24px;
-    width: 1392px;
     margin: 0 auto;
     height: 100%;
     position: relative;
+    @media (min-width: bootstrap.$desktop) {
+      width: 1392px;
+    }
   }
 }
